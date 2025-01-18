@@ -1,0 +1,26 @@
+{
+  "name": "xx-err",
+  "version": "0.0.0",
+  "description": "XML errors",
+  "keywords": [
+    "xpath",
+    "xml"
+  ],
+  "main": "xx-err.js",
+  "scripts": {
+    "test": "nyc mocha",
+    "coverage": "nyc report --reporter=lcov"
+  },
+  "author": "jazz-soft (https://jazz-soft.net/)",
+  "devDependencies": {
+    "mocha": "^11.0.1",
+    "nyc": "^17.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jazz-soft/xx-err.git"
+  },
+  "homepage": "https://github.com/jazz-soft/xx-err",
+  "bugs": "https://github.com/jazz-soft/xx-err/issues",
+  "license": "MIT"
+}
