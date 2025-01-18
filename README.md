@@ -1,4 +1,9 @@
 # xx-err
+[![npm](https://img.shields.io/npm/v/xx-err.svg)](https://www.npmjs.com/package/xx-err)
+[![npm](https://img.shields.io/npm/dt/xx-err.svg)](https://www.npmjs.com/package/xx-err)
+[![build](https://github.com/jazz-soft/xx-err/actions/workflows/build.yml/badge.svg)](https://github.com/jazz-soft/xx-err/actions)
+[![Coverage](https://coveralls.io/repos/github/jazz-soft/xx-err/badge.svg?branch=main)](https://coveralls.io/github/jazz-soft/xx-err?branch=main)
+
 ## XML errors:
 * [FOAP0001](https://www.w3.org/TR/xpath-functions-31/#ERRFOAP0001): Wrong number of arguments.
 * [FOAR0001](https://www.w3.org/TR/xpath-functions-31/#ERRFOAR0001): Division by zero.
@@ -79,5 +84,5 @@ if (/*something wrong*/) err.XPST0003('Something went wrong...');
 
 // - this throws the following Error:
 // err:XPST0003, Syntax error. Something went wrong...
-// https://www.w3.org/TR/xpath-31/#ERRXPST0003
+// see https://www.w3.org/TR/xpath-31/#ERRXPST0003
 ```

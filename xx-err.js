@@ -8,7 +8,7 @@ const url = {
 
 for (var k of Object.keys(code)) {
   err[k] = function(s) {
-    throw new Error(`err:${k}, ${code[k]}${s ? ' ' + s : ''}\n${url[k.substring(0, 2)]}${k}`);
+    throw new Error(`err:${k}, ${code[k]}${s ? ' ' + s : ''}\nsee ${url[k.substring(0, 2)]}${k}`);
   };
 }
 
