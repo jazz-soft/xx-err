@@ -67,5 +67,7 @@ module.exports = {
   FOXT0004: 'XSLT transformation has been disabled.',
   FOXT0006: 'XSLT output contains non-accepted characters.',
 
+  XPST0001: 'Static context is absent.',
+  XPDY0002: 'Dynamic context is absent.',
   XPST0003: 'Syntax error.',
 };

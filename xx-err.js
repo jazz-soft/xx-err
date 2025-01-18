@@ -6,9 +6,13 @@ const url = {
   XQ: 'https://www.w3.org/TR/xpath-31/#ERR',
 };
 
-for (var k of Object.keys(code)) {
-  err[k] = function(s) {
-    throw new Error(`err:${k}, ${code[k]}${s ? ' ' + s : ''}\nsee ${url[k.substring(0, 2)]}${k}`);
+for (var c of Object.keys(code)) {
+  err[c] = function(s, o) {
+    if (typeof s == 'object') { o = s; s = undefined; }
+    var error = new Error(`err:${c}, ${code[c]}${s ? ' ' + s : ''}\nsee ${url[c.substring(0, 2)]}${c}`);
+    error.code = c;
+    if (typeof o == 'object') for (var k of Object.keys(o)) error[k] = o[k];
+    throw error;
   };
 }
 

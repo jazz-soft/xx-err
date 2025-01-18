@@ -86,3 +86,23 @@ if (/*something wrong*/) err.XPST0003('Something went wrong...');
 // err:XPST0003, Syntax error. Something went wrong...
 // see https://www.w3.org/TR/xpath-31/#ERRXPST0003
 ```
+## Arguments:
+`err.XPST0003();` `err.XPST0003(str);` `err.XPST0003(obj);` `err.XPST0003(str, obj);`
+* `str` - a string to be included in the error's `message`.
+* `obj` - additional data to attach to the error object.
+
+e.g:
+```js
+try {
+  err.XPST0003('Oops!', { row: 2, col: 5 });
+}
+catch (e) {
+  console.log(e.code); // XPST0003
+  console.log(e.message);
+  // err:XPST0003, Syntax error. Oops!
+  // see https://www.w3.org/TR/xpath-31/#ERRXPST0003
+  console.log(e.row);  // 2
+  console.log(e.col);  // 5
+}
+```
+
